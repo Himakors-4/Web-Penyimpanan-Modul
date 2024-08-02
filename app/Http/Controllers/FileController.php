@@ -29,15 +29,15 @@ class FileController extends Controller
         $modul->user_id = auth()->id();
         $modul->save();
 
-        return redirect()->route('modul.index');
+        return redirect()->route('home');
     }
 
     // Read
     public function show_file()
     {
         $moduls = Modul::latest()->get();
-        dd($moduls);
-        return view('modul.index', compact('moduls'));
+        // dd($moduls);
+        return view('home', compact('moduls'));
     }
 
     // Update

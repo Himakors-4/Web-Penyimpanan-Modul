@@ -34,15 +34,15 @@
                         <td>{{ $modul->file_size }} bytes</td>
                         <td>{{ $modul->file_type }}</td>
                         <td>
-                            <a href="{{ route('modul.download', $modul->id) }}"
-                                class="btn btn-success btn-sm">Download</a>
+                            <a href="/show_modul"
+                                class="btn btn-success btn-sm">Download</a> <!-- masih dalam perbaikan -->
                             <form action="{{ route('modul.delete', $modul->id) }}" method="POST"
                                 style="display:inline-block;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>
-                            <a href="{{ route('modul.edit', $modul->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="/show_modul" class="btn btn-primary btn-sm">Edit</a> <!-- masih dalam perbaikan -->
                         </td>
                     </tr>
                 @endforeach
@@ -51,7 +51,7 @@
 
         <!-- Add new module form -->
         <h3>Add New Modul</h3>
-        <form action="{{ route('modul.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('add_modul') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="nama_modul">Nama Modul:</label>
