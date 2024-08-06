@@ -1,4 +1,4 @@
-<!-- resources/views/modul/index.blade.php -->
+<!-- resources/views/home.blade.php -->
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +10,6 @@
 <body>
     <div class="container mt-5">
         <h2>Modul List</h2>
-
         <!-- Display all the modules -->
         <table class="table table-bordered">
             <thead>
@@ -34,15 +33,13 @@
                         <td>{{ $modul->file_size }} bytes</td>
                         <td>{{ $modul->file_type }}</td>
                         <td>
-                            <a href="/show_modul"
-                                class="btn btn-success btn-sm">Download</a> <!-- masih dalam perbaikan -->
-                            <form action="{{ route('modul.delete', $modul->id) }}" method="POST"
-                                style="display:inline-block;">
+                            <a href="{{ route('modul.edit', $modul->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="{{ route('modul.download', $modul->id) }}" class="btn btn-success btn-sm">Download</a>
+                            <form action="{{ route('modul.delete', $modul->id) }}" method="POST" style="display:inline-block;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>
-                            <a href="/show_modul" class="btn btn-primary btn-sm">Edit</a> <!-- masih dalam perbaikan -->
                         </td>
                     </tr>
                 @endforeach
@@ -67,7 +64,17 @@
             </div>
             <button type="submit" class="btn btn-primary">Upload</button>
         </form>
+        @if ($errors->any())
+            <div class="alert alert-danger mt-3">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
+
 </body>
 
 </html>

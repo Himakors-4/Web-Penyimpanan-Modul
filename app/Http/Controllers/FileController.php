@@ -29,7 +29,7 @@ class FileController extends Controller
         $modul->user_id = auth()->id();
         $modul->save();
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'Modul berhasil ditambahkan.');
     }
 
     // Read
@@ -63,18 +63,24 @@ class FileController extends Controller
         $modul->deskripsi = $request->deskripsi;
         $modul->save();
 
-        return redirect()->route('modul.index');
+        return redirect()->route('home')->with('success', 'Modul berhasil diperbarui.');
     }
 
     // Delete
     public function delete_file(Modul $modul)
     {
         $modul->delete();
-        return redirect()->route('modul.index');
+        return redirect()->route('home');
     }
 
     public function download(Modul $modul)
     {
         return response()->download(storage_path('app/' . $modul->file_path), $modul->file_name);
+    }
+
+    public function edit(Modul $modul)
+    {
+        $moduls = Modul::latest()->get();
+        return view('edit', compact('modul'));
     }
 }
