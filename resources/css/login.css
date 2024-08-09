@@ -1,0 +1,45 @@
+*{
+    background-size: cover; /* Menutupi seluruh area elemen */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background: radial-gradient(circle, 
+                                #273526 0%, 
+                                #45624E 25%, 
+                                #6D8777 50, 
+                                #C0CFB2 75%, 
+                                #E4E6D9 100%); /* Standard syntax */
+    background: -webkit-radial-gradient(circle, 
+                                        #273526 0%, 
+                                        #45624E 25%, 
+                                        #6D8777 50%, 
+                                        #C0CFB2 75%, 
+                                        #E4E6D9 100%); /* Safari */
+    background: -o-radial-gradient(circle, 
+                                   #273526 0%, 
+                                   #45624E 25%, 
+                                   #6D8777 50%, 
+                                   #C0CFB2 75%, 
+                                   #E4E6D9 100%); /*Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, 
+                                     #273526 0%, 
+                                     #45624E 25%, 
+                                     #6D8777 50%, 
+                                     #C0CFB2 75%, 
+                                     #E4E6D9 100%); /* Firefox 3.6 to 15 */
+}
+.mb-3{
+    margin: 20px;
+   
+}
+
+input {
+    background-color: white;
+}
+.button{
+   color: #273526;
+   align-items: center; 
+   justify-content: center;
+}
+
+x-form{
+    margin-top: 50 px;
+}
