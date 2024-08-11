@@ -5,11 +5,17 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home.index');
 });
 
 // Menampilkan Modul
-Route::get('/', [FileController::class, 'show_file'])->name('home');
+Route::get('/list', [FileController::class, 'show_file'])->name('list');
+
+
+// route add_modul
+Route::get('/add', function () {
+    return view('moduls.add');
+})->name('add');
 
 // Menambahkan Modul
 Route::post('/add_modul', [FileController::class, 'store_file'])->name('add_modul');
