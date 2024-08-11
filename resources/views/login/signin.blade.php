@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Document</title>
+    @vite('resources/css/login.css')
+    <title>Sign in</title>
 </head>
 <body>
+    <img src="{{ asset('img/image1.png') }}" class="top-left-honeycomb ">
     @if(session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('success') }}
-            <button type="button" class="btn-close" data-bs-dsimiss="alert" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
 
@@ -21,11 +23,12 @@
         </div>
     @endif
     <div class="col-lg-5">
+        <img src="{{ asset('img/logo.png') }}" class="logo">
         <h1>Sign-In Form</h1>
         <form action="/login" method="POST">
             @csrf
             <div class="form-floating">
-                <input type="email" class="form-control @error('email) is-invalid @enderror" id="email" name="email" placeholder="name@example.com" required value="{{ old('email') }}">
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="name@example.com" required value="{{ old('email') }}">
                 <label for="email">Email Address</label>
                 
             </div>
@@ -40,7 +43,6 @@
         <small>Don't have an account? <a href="/signup">Sign up Now!</a></small>
     </div>
 
-    
-    
+    <img src="{{ asset('img/image2.png') }}" class="bottom-right-honeycomb "> 
 </body>
 </html>

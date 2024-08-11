@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Document</title>
+    @vite('resources/css/login.css')
+    <title>Sign Up</title>
 </head>
 <body>
+    <img src="{{ asset('img/image1.png') }}" class="top-left-honeycomb ">
     <div class="col-lg-5">
+        <img src="{{ asset('img/logo.png') }}" class="logo">
         <h1>Sign up</h1>
         <form action="" method="POST">
             @csrf
@@ -36,6 +39,8 @@
         </form>
         <small>Already have an account? <a href="/signin">Sign in Now!</a></small>
     </div>
-    
+    <div class="honeycomb">
+        <img src="{{ asset('img/image2.png') }}" class="bottom-right-honeycomb ">
+    </div>
 </body>
 </html>
