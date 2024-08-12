@@ -2,8 +2,8 @@
 @section('title', 'Modul List')
 
 @section('content')
-    <div class="container mt-5">
-        <h2>Modul List</h2>
+    <div class="container mt-3">
+        <h2 style="font-weight: bold;">Modul List</h2>
         <x-table :headers="['No', 'Nama Modul', 'Deskripsi', 'File Name', 'File Size', 'File Type', 'Actions']">
             @foreach ($moduls as $modul)
                 <tr>
@@ -14,12 +14,12 @@
                     <td>{{ $modul->file_size }} bytes</td>
                     <td>{{ $modul->file_type }}</td>
                     <td>
-                        <x-button variant="primary" text="Edit" :href="route('modul.edit', $modul->id)" class="btn-sm" />
-                        <x-button variant="success" text="Download" :href="route('modul.download', $modul->id)" class="btn-sm" />                            
+                        <x-button variant="primary" text="Edit" :href="route('modul.edit', $modul->id)" class="btn-sm"/>
+                        <x-button variant="success" text="Download" :href="route('modul.download', $modul->id)" class="btn-sm mt-1" />                            
                         <x-form action="{{ route('modul.delete', $modul->id) }}" method="POST" style="display:inline-block;">
                             @csrf
                             @method('DELETE')
-                            <x-button type="submit" variant="danger" text="Delete" class="btn-sm" />
+                            <x-button type="submit" variant="danger" text="Delete" class="btn-sm mt-1" />
                         </x-form>
                     </td>
                 </tr>

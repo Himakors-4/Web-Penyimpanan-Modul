@@ -2,7 +2,7 @@
 @section('title', 'Add New Modul')
 
 @section('content')
-    <h3>Add New Modul</h3>
+    <h2 class="mt-3" style="font-weight: bold;">Add New Modul</h2>
         <x-form action="{{ route('add_modul') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">

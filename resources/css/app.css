@@ -1,0 +1,75 @@
+body, html, .container-fluid{
+    background-color: #E4E6D9;
+    font-family: 'Montserrat';
+}
+
+.sidebar, .separator, .content {
+    border-radius: 15px; /* Rounded edges */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #45624E;
+    height: 100vh; /* Full height */
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    max-width: max-content;
+}
+
+.sidebar .sidebar-up {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #45624E;
+    height: 35%;
+}
+
+.sidebar .sidebar-bottom {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #0E210B;
+    color: #E4E6D9;
+    height: 65%;
+    padding: 10%;
+}
+
+.sidebar a {
+    color: #E4E6D9; /* Ubah warna teks menjadi putih */
+}
+
+.sidebar a:hover {
+    color: #0E210B; /* Opsional: Ubah warna saat link di-hover */
+} 
+
+.sidebar .d-flex a:hover{
+    color: #6D8777;
+}
+
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    margin: 5px 0; /* Adjust as needed */
+    text-decoration: none;
+    color: white; /* Adjust as needed */
+    font-size: 16px; /* Adjust as needed */
+}
+
+.sidebar-link .bi {
+    margin-right: 8px; /* Adjust spacing between icon and text */
+}
+
+.separator {
+    background-color: white; /* White background for separator */
+    width: 1%; /* Adjust the width as needed */
+    max-width: 20px;
+}
+
+/* content */
+.content {
+    background-color:  #C0CFB2; /* Light gray background for content */
+    height: 100vh; /* Full height */
+    box-sizing: border-box; /* Menyertakan padding dan border dalam lebar/tinggi */
+    padding: 15px; /* Opsional: Menambahkan padding */
+    overflow-x: hidden;
+}

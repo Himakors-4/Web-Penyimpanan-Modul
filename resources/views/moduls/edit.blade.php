@@ -2,8 +2,8 @@
 @section('title', 'Edit Modul')
 
 @section('content')
-<div class="container mt-5">
-    <h2>Edit Modul</h2>
+<div class="container mt-3">
+    <h2 style="font-weight: bold;">Edit Modul</h2>
     <x-form action="{{ route('modul.update', $modul->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
