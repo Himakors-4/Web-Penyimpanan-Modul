@@ -10,7 +10,7 @@
 <body>
     <img src="{{ asset('img/image1.png') }}" class="top-left-honeycomb ">
     <div class="col-lg-5">
-        <img src="{{ asset('img/logo.png') }}" class="logo">
+        <img src="{{ asset('img/logo.png') }}" class="logo" style="margin-top: 100px;">
         <h1>Sign up</h1>
         <form action="" method="POST">
             @csrf
@@ -37,10 +37,10 @@
 
             <button class="btn-lg btn-primary" type="submit" value="Submit">Sign up</button>
         </form>
-        <small>Already have an account? <a href="/signin">Sign in Now!</a></small>
+            <small>Already have an account? <a href="/signin">Sign in Now!</a></small>
     </div>
     <div class="honeycomb">
-        <img src="{{ asset('img/image2.png') }}" class="bottom-right-honeycomb ">
+        <img src="{{ asset('img/image2.png') }}" class="bottom-right-honeycomb" style="bottom: -100px">
     </div>
 </body>
 </html>

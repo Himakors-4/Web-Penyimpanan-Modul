@@ -48,6 +48,7 @@ body{
     width: 90%; /* Adjust as needed */
     max-width: 500px; /* To limit the maximum size */
     margin-bottom: 50px;
+    margin-top: 60px;
 }
 
 .logo{
@@ -55,7 +56,6 @@ body{
     height: auto;
     align-self: center;
     margin-bottom: 20px;
-    margin-top: 100px;
 }
 
 h1{
@@ -125,16 +125,14 @@ small{
   
   /* Sarang lebah di sudut kanan bawah */
   .bottom-right-honeycomb {
-      bottom: 0px;
-      right: 0px;
-     width: 230px; 
+    right: 0px;
+    width: 230px; 
   }
 
 .top-left-honeycomb,
 .bottom-right-honeycomb {
     position: absolute;
     max-width: 20%;
-    height: auto;
     height: auto;
     margin: 0;
     padding: 0;

@@ -22,7 +22,7 @@
             <button type="button" class="btn-close" data-bs-dsimiss="alert" aria-label="Close"></button>
         </div>
     @endif
-    <div class="col-lg-5">
+    <div class="col-lg-5 mb-5">
         <img src="{{ asset('img/logo.png') }}" class="logo">
         <h1>Sign-In Form</h1>
         <form action="/login" method="POST">
@@ -43,6 +43,6 @@
         <small>Don't have an account? <a href="/signup">Sign up Now!</a></small>
     </div>
 
-    <img src="{{ asset('img/image2.png') }}" class="bottom-right-honeycomb "> 
+    <img src="{{ asset('img/image2.png') }}" class="bottom-right-honeycomb" style="bottom: 0px;"> 
 </body>
 </html>
